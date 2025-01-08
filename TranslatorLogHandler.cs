@@ -18,7 +18,7 @@ namespace moe.kyre.logTranslator
         public async void LogFormat (LogType logType, UnityEngine.Object context, string format, params object[] args)
         {
             string result = await Translator.Translate(format);
-            _handler.LogFormat(logType, context, Translator.QueryBuilder(Translator.url, "en", "ja"), args);
+            _handler.LogFormat(logType, context, result, args);
         }
 
         public void LogException(Exception exception, UnityEngine.Object context)

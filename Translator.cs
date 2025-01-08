@@ -39,7 +39,7 @@ namespace moe.kyre.logTranslator
                 }
                 else
                 {
-                    return $"Error: {webRequest.error}";
+                    return english;
                 }
             }
         }
